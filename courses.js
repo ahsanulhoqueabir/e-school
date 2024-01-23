@@ -42,7 +42,6 @@ const courses = [
     seats: 60,
   },
 ];
-
 // adding data in course section
 const AllCourses = document.querySelector("#AllCourses");
 
@@ -85,7 +84,6 @@ courses.forEach((course) => {
 // handling cart section-------------------------
 let TotalFee = 0;
 let totalItems = 0;
-let Enrolled;
 const allCard = document.querySelectorAll(".BTN");
 for (let card of allCard) {
   card.addEventListener("click", (e) => {
@@ -97,19 +95,7 @@ for (let card of allCard) {
     const Seats = seats(e);
     handleSeat(e);
     display(Title, Img, Fee, Seats);
-    displayCheckout(TotalFee, totalItems);
-    Enrolled = document.querySelectorAll(".deleteBTN");
-    for (let enroll of Enrolled) {
-      enroll.addEventListener("click", (e) => {
-        const fee =
-          e.target.parentElement.parentElement.parentElement.children[0]
-            .children[2].children[0].innerText;
-        TotalFee = parseInt(TotalFee) - parseInt(fee);
-        totalItems--;
-        displayCheckout(TotalFee, totalItems);
-        enroll.parentElement.parentElement.parentElement.remove();
-      });
-    }
+    displayCheckout();
   });
 }
 
@@ -161,10 +147,34 @@ const display = (title, img, fee, seats) => {
     
     `;
   Cart.appendChild(div);
+  // Event Listener for delete button
+  const deleteBTN = document.querySelectorAll(".deleteBTN");
+  for (let btn of deleteBTN) {
+    btn.addEventListener("click", (e) => {
+      const fee =
+        e.target.parentElement.parentElement.parentElement.children[0]
+          .children[2].children[0].innerText;
+
+      TotalFee = TotalFee - parseInt(fee);
+      totalItems--;
+      e.target.parentElement.parentElement.parentElement.parentElement.remove();
+      if (totalItems <= 0) {
+        const checkout = document.querySelector("#checkout");
+        checkout.innerHTML = "";
+      }
+      displayCheckout();
+      handleSeat(e);
+      console.log(fee);
+    });
+  }
 };
 
-const displayCheckout = (TotalFee, totalItems) => {
+const displayCheckout = () => {
   const checkout = document.querySelector("#checkout");
+  if (totalItems <= 0) {
+    checkout.innerHTML = "";
+    return;
+  }
   checkout.innerHTML = `
     <hr class="border-[1px] border-black" />
     <div class="flex justify-between px-10 py-5">
