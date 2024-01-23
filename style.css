@@ -1,0 +1,3 @@
+.BTN {
+    @apply px-4 py-2 w-fit bg-[#21B573] rounded-3xl text-white;
+}
