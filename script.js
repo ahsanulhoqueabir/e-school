@@ -73,7 +73,6 @@ const createStudent = (course) => {
       </div>
     </div>
     `;
-  // coursesDiv.appendChild(student)
   return student;
 };
 // Rendering the first course in array by default

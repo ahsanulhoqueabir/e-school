@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>E-School</title>
+    <title>Courses</title>
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css"
       rel="stylesheet"
@@ -18,7 +18,7 @@
   </head>
   <body>
     <!-- navbar  -->
-    <div class="bg-[#F0FFF0] flex lg:px-20 px-5 py-5 items-center">
+    <div class="flex lg:px-20 px-5 py-5 items-center">
       <div class="navbar">
         <div class="navbar-start">
           <div class="dropdown">
@@ -48,7 +48,11 @@
             </ul>
           </div>
           <a class="btn btn-ghost text-xl">
-            <img class="h-[40px]" src="https://i.ibb.co/q5pZCzd/logo.png" alt="" />
+            <img
+              class="h-[40px]"
+              src="https://i.ibb.co/q5pZCzd/logo.png"
+              alt=""
+            />
             <p class="text-[#56548C] font-bold">E-School</p>
           </a>
         </div>
@@ -71,113 +75,47 @@
       </div>
       <div class="flex-1">
         <button
-          class="w-24 z-30 h-12 border-2 border-sky-300 text-sky-800  rounded-full hover:text-white duration-300 relative group"
+          class="w-24 h-12 border-2 border-sky-300 text-sky-800 rounded-full hover:text-white duration-300 relative group z-30"
         >
           <span
             class="absolute w-8 group-hover:w-[84%] duration-300 flex group-hover:justify-start rounded-full inset-2 bg-sky-300 group-hover:bg-sky-500 group-hover:duration-500 -z-10"
           ></span
-          >Sign In
+          >Sign Out
         </button>
       </div>
     </div>
-    <!------------------- header ------------------- -->
-    <div
-      class="lg:px-20 items-center px-5 py-10 bg-[#F0FFF0] flex flex-col flex-col-reverse lg:flex-row gap-5"
-    >
-      <div class="space-y-4">
-        <h3 class="text-[#FD511A]">Are you ready to Learn?</h3>
-        <h1 class="text-5xl font-bold">
-          Learn With fun on <span class="text-[#21B573]">any schedule</span>
-        </h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Varius
-          blandit facilisis quam netus.
-        </p>
-        <button class="px-4 py-2 bg-[#21B573] rounded-3xl text-white">
-          Get Started
-        </button>
-      </div>
-      <div>
-        <img src="https://i.ibb.co/1qgnXyX/coverIMG.png
-        https://i.ibb.co/q5pZCzd/logo.png" alt="" />
-      </div>
-    </div>
-    <!-- main section started  -->
-    <main>
-      <!-- 1st section  -->
-      <section
-        class="grid grid-cols-2 md:grid-cols-4 gap-5 px-4 py-10 justify-between lg:px-44"
-      >
+
+    <!-- main body  -->
+    <main class="px-3 lg:px-20 py-20">
+      <h2 class="text-4xl font-bold">All Courses</h2>
+      <div class="flex flex-col lg:flex-row gap-10 lg:gap-5 py-10">
         <div
-          class="flex py-5 hover:shadow-2xl hover:bg-white rounded shadow-[#F5FFFA] flex-col items-center lg:p-5 bg-[#F5FFFA]"
+          id="AllCourses"
+          class="lg:w-[75%] grid grid-cols-1 lg:grid-cols-2 gap-5"
         >
-          <img src="./img/image 1.png" alt="" />
-          <h2 class="pt-4">1500+ Topic</h2>
-          <p>Learn Anythings</p>
+          <!-- all courses data will  be added dynamically here  -->
         </div>
-        <div
-          class="flex py-5 hover:shadow-2xl hover:bg-white rounded shadow-[#F5FFFA] flex-col items-center lg:p-5 bg-[#F5FFFA]"
-        >
-          <img src="./img/image 2.png" alt="" />
-          <h2 class="pt-4">1800+ Students</h2>
-          <p>Learn Anythings</p>
-        </div>
-        <div
-          class="flex py-5 hover:shadow-2xl hover:bg-white rounded shadow-[#F5FFFA] flex-col items-center lg:p-5 bg-[#F5FFFA]"
-        >
-          <img src="./img/image 3.png" alt="" />
-          <h2 class="pt-4">9K+ Test Taken</h2>
-          <p>Learn Anythings</p>
-        </div>
-        <div
-          class="flex py-5 hover:shadow-2xl hover:bg-white rounded shadow-[#F5FFFA] flex-col items-center lg:p-5 bg-[#F5FFFA]"
-        >
-          <img src="./img/image 4.png" alt="" />
-          <h2 class="pt-4">2000+ Student</h2>
-          <p>Learn Anythings</p>
-        </div>
-      </section>
-      <!-- online course section  -->
-      <section class="py-10 lg:px-20">
-        <h2 class="text-2xl font-bold text-center">Online Courses</h2>
-        <div
-          id="courses"
-          class="pt-10 px-10 lg:px-0 gap-10 flex flex-col lg:flex-row"
-        >
-          <!-- course cards are added dynamically there  -->
-        </div>
-        <div class="flex justify-center py-10">
-          <a href="./Courses.html">
-            <button class="px-4 py-2 w-fit bg-[#21B573] rounded-3xl text-white">
-                All Courses
-              </button>
-          </a>
-        </div>
-      </section>
-      <!-- testomonial section  -->
-      <section class="px-10 py-10 lg:w-1/2 mx-auto">
-        <h2 class="font-bold text-3xl text-center pb-10">Testimonial</h2>
-        <div class="flex gap-5 items-center">
-          <div>
-            <img class="lg:h-28 lg:w-72" src="./img//Ellipse 5.png" alt="" />
+        <div  class="lg:w-[35%]">
+          <div class="flex flex-col gap-3" id="Cart">
+            <!-- all cart will be added here dynamically  -->
           </div>
-          <div class="space-y-2">
-            <p>
-              There are many variations of passages of Lorem Ipsum available,
-              but the majority have suffered alteration in some form, by
-              injected humour, or randomised words which don't look even
-              slightly believable.
-            </p>
-          </div>
+         <div id="checkout" class="pt-10">
+            <!-- checkout part will be added there  -->
+         </div>
         </div>
-      </section>
+      </div>
     </main>
     <!-- footer  -->
+
     <div class="bg-[#282531] text-white pb-5">
       <footer class="footer p-10">
         <aside>
           <a class="btn btn-ghost text-xl">
-            <img class="h-[40px]" src="https://i.ibb.co/q5pZCzd/logo.png" alt="" />
+            <img
+              class="h-[40px]"
+              src="https://i.ibb.co/q5pZCzd/logo.png"
+              alt=""
+            />
             <p class="text-[#56548C] font-bold">E-School</p>
           </a>
 
@@ -213,8 +151,8 @@
       </footer>
       <p class="text-center">Copyright © 2024 21daysofcode.com</p>
     </div>
+    <!-- script file  -->
 
-    <!-- script source section  -->
-    <script src="./script.js"></script>
+    <script src="./courses.js"></script>
   </body>
 </html>
