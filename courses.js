@@ -171,10 +171,7 @@ const display = (title, img, fee, seats) => {
 
 const displayCheckout = () => {
   const checkout = document.querySelector("#checkout");
-  if (totalItems <= 0) {
-    checkout.innerHTML = "";
-    return;
-  }
+
   checkout.innerHTML = `
     <hr class="border-[1px] border-black" />
     <div class="flex justify-between px-10 py-5">
